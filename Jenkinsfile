@@ -6,12 +6,12 @@ pipeline {
      }
     environment {
     DOCKERHUB_CREDENTIALS = credentials('delco-dockerhub')
-    APP_NAME = "ooghenekaro/argo-rollout-bluegreen"
+    APP_NAME = "dngwenyi/argo-rollout-bluegreen"
     }
     stages { 
         stage('SCM Checkout') {
             steps{
-           git branch: 'main', url: 'https://github.com/ooghenekaro/Argo-rollout-nodejs.git'
+           git branch: 'main', url: 'https://github.com/dngwenyi/argo-rollout-nodejs.git'
             }
         }
         // run sonarqube test
